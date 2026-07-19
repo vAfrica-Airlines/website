@@ -25,17 +25,13 @@ the steps below and you'll be ready for your first flight.
     This is the step that makes you a vAfrica pilot. Apply to join us directly
     on vAMSYS.
 
-    <p>
-      <a href="<VAMSYS_JOIN_URL>" class="md-button md-button--primary">Join vAfrica on vAMSYS</a>
-    </p>
+    [Join vAfrica on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }
 
 3.  **Join our Discord.**
 
     Say hello, meet the community, and get help getting set up.
 
-    <p>
-      <a href="<DISCORD_INVITE_URL>" class="md-button">Join our Discord</a>
-    </p>
+    [Join our Discord]({{ discord_url }}){ .md-button }
 
 4.  **Fly your first flight.**
 
@@ -51,6 +47,4 @@ the steps below and you'll be ready for your first flight.
 
 ## Ready?
 
-<p>
-  <a href="<VAMSYS_JOIN_URL>" class="md-button md-button--primary">Join on vAMSYS</a>
-</p>
+[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }

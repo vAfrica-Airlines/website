@@ -75,6 +75,9 @@ nav:
 # ---------------------------------------------------------------------------
 plugins:
   - search
+  # Single source of truth for CTA URLs — pages reference {{ vamsys_join_url }}
+  # and {{ discord_url }} (defined under `extra:` below) instead of hardcoding.
+  - macros
   - minify:
       minify_html: true
   # Social cards / Open Graph images. Needs Cairo/Pango system libs in CI
@@ -106,10 +109,15 @@ extra_css:
   - assets/stylesheets/extra.css
 
 extra:
+  # ---- CTA URLs: single source of truth (used via macros in page bodies) ----
+  # Update these two lines to change every "Join" button across the site.
+  vamsys_join_url: "https://vamsys.io/register/vafs"
+  discord_url: "https://discord.gg/JPWaZEHG4"
   social:
-    # TODO: Miguel — replace <DISCORD_INVITE_URL> with the real invite link.
+    # Macros do NOT expand inside mkdocs.yml, so this uses the literal URL.
+    # Keep it in sync with `discord_url` above.
     - icon: fontawesome/brands/discord
-      link: <DISCORD_INVITE_URL>
+      link: "https://discord.gg/JPWaZEHG4"
       name: vAfrica Airlines on Discord
   # Uncomment to disable Material's "Made with Material" footer note if desired.
   generator: true

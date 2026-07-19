@@ -53,10 +53,30 @@ so they're find-and-replaceable — never guess real URLs, domains, or copy:
 | `<AIRLINE_TAGLINE>`    | One-line value prop / tagline              |
 
 - Mark spots needing real copy with `<!-- TODO: Miguel -->`.
-- External CTA links are written as raw HTML `<a>` anchors so the `<TOKEN>`
-  survives markdown parsing and `--strict` link validation. Internal page links
-  use normal markdown relative links (which strict *does* validate — keep them
-  correct).
+
+### CTA URLs — centralized, never inlined
+
+The two CTA URLs live in **one place** and are referenced everywhere via the
+`macros` plugin:
+
+- Defined in `mkdocs.yml` under `extra:` — `vamsys_join_url` and `discord_url`.
+- Used in page bodies as markdown buttons:
+  `[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }`.
+- The footer `extra.social` Discord link uses the **literal** URL (macros don't
+  expand inside `mkdocs.yml`) — keep it in sync with `discord_url`.
+
+> **Do not** write CTAs as raw HTML `<a href="<TOKEN>">` or as
+> `[text](<TOKEN>)`. A bare `<TOKEN>` becomes a *relative autolink*, so the
+> button 404s against the current page and `--strict` does **not** catch it.
+> That was the original dead-CTA bug. Always use the `{{ macro }}` form above.
+
+### Build guard against stray tokens
+
+CI (`.github/workflows/deploy.yml`) fails the build if any unreplaced token
+remains, via `grep -rniE '<[A-Z_]+_URL>|vafricaairlines\.com/<|>>|<<INSERT'`
+over `docs/` and `mkdocs.yml`. `--strict` can't see these; the guard is the
+safety net. If you add a new placeholder token, make sure it's replaced (or
+extend the guard) before merging to `main`.
 
 ## Design / copy
 
