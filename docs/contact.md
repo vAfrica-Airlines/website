@@ -8,9 +8,7 @@ description: Get in touch with vAfrica Airlines. Our Discord community is the fa
 The fastest way to reach vAfrica Airlines — and the heart of our community — is
 **Discord**. Come say hello.
 
-<p>
-  <a href="<DISCORD_INVITE_URL>" class="md-button md-button--primary">Join our Discord</a>
-</p>
+[Join our Discord]({{ discord_url }}){ .md-button .md-button--primary }
 
 ## Other ways to reach us
 
@@ -18,12 +16,10 @@ The fastest way to reach vAfrica Airlines — and the heart of our community —
      (email, contact form, social). Remove the ones you don't use. -->
 
 - **Discord:** primary channel (button above).
-- **Email:** <!-- TODO: Miguel — add a contact email, or delete this line. -->
+- **Email:** [info@vafricaairlines.com](mailto:info@vafricaairlines.com)
 
 ---
 
 ## Ready to fly with us?
 
-<p>
-  <a href="<VAMSYS_JOIN_URL>" class="md-button md-button--primary">Join on vAMSYS</a>
-</p>
+[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }

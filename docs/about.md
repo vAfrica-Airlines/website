@@ -37,8 +37,6 @@ where you'll do your flying. This site just helps you find us and get started.
 
 ## Ready to join?
 
-<p>
-  <a href="<VAMSYS_JOIN_URL>" class="md-button md-button--primary">Join on vAMSYS</a>
-</p>
+[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }
 
 [How joining works →](join.md)

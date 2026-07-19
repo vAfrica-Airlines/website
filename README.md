@@ -101,27 +101,41 @@ GitHub Pages custom-domain docs:
 
 ---
 
-## Placeholders Miguel must replace
+## CTA URLs — one place to edit
 
-This is scaffolding. Search the repo for each token below and replace **all**
-occurrences with real values. Also replace the placeholder assets.
+The vAMSYS join and Discord invite links are **centralized** (via the `macros`
+plugin) so they can't drift out of sync. To change them, edit the two values in
+`mkdocs.yml` under `extra:` — that updates every button on the site:
 
-| Token / item          | Where it appears                                   | Replace with                          |
+```yaml
+extra:
+  vamsys_join_url: "https://vamsys.io/register/vafs"
+  discord_url: "https://discord.gg/JPWaZEHG4"
+```
+
+Pages reference them as `[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button }`.
+The footer `extra.social` Discord link uses the literal URL (macros don't expand
+inside `mkdocs.yml`) — keep it in sync with `discord_url`.
+
+CI enforces this: the **placeholder guard** in `deploy.yml` fails the build if a
+`<…_URL>` / `<<INSERT` / `>>` token is left behind (`--strict` can't catch those).
+
+## Placeholders still to replace
+
+| Item                  | Where it appears                                   | Replace with                          |
 | --------------------- | -------------------------------------------------- | ------------------------------------- |
-| ~~`<CUSTOM_DOMAIN>`~~ | done — set to `vafricaairlines.com`                | ✅ replaced                            |
-| `<VAMSYS_JOIN_URL>`   | `docs/index.md`, `about.md`, `join.md`, `faq.md`, `contact.md` | The vAMSYS join/apply URL             |
-| `<DISCORD_INVITE_URL>`| `docs/index.md`, `join.md`, `contact.md`, `mkdocs.yml` (`extra.social`) | Your Discord invite link              |
-| `<AIRLINE_TAGLINE>`   | `docs/index.md`                                    | Your one-line tagline / value prop    |
+| ~~`<CUSTOM_DOMAIN>`~~ | done — `vafricaairlines.com`                        | ✅                                     |
+| ~~`<VAMSYS_JOIN_URL>`~~ | done — `extra.vamsys_join_url`                    | ✅                                     |
+| ~~`<DISCORD_INVITE_URL>`~~ | done — `extra.discord_url` + `extra.social`   | ✅                                     |
 | `<!-- TODO: Miguel -->` blocks | throughout `docs/`                        | Real page copy                        |
 | `docs/assets/images/logo.svg` | header logo                               | Real logo art                         |
 | `docs/assets/images/favicon.svg` | browser tab icon                       | Real favicon                          |
 | Brand colors          | `docs/assets/stylesheets/extra.css`, `theme.palette` in `mkdocs.yml` | Real brand palette   |
 
-Find every token at once:
+Find remaining copy placeholders:
 
 ```bash
-grep -rn -e '<VAMSYS_JOIN_URL>' -e '<DISCORD_INVITE_URL>' \
-        -e '<AIRLINE_TAGLINE>' -e 'TODO: Miguel' .
+grep -rn -e 'TODO: Miguel' docs/
 ```
 
 ## Optional: social cards (Open Graph images)

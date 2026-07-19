@@ -39,6 +39,4 @@ description: Frequently asked questions about joining and flying with vAfrica Ai
 
 ## Ready to join?
 
-<p>
-  <a href="<VAMSYS_JOIN_URL>" class="md-button md-button--primary">Join on vAMSYS</a>
-</p>
+[Join on vAMSYS]({{ vamsys_join_url }}){ .md-button .md-button--primary }
