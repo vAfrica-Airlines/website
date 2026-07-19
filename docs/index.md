@@ -6,6 +6,8 @@ hide:
   - toc
 ---
 
+![vAfrica Airlines — Fly Africa's skies](assets/images/hero.png){ .vafrica-hero }
+
 # vAfrica Airlines
 
 Fly Africa's skies with a community of flight-sim pilots. vAfrica Airlines runs

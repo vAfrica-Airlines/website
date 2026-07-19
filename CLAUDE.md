@@ -73,10 +73,11 @@ The two CTA URLs live in **one place** and are referenced everywhere via the
 ### Build guard against stray tokens
 
 CI (`.github/workflows/deploy.yml`) fails the build if any unreplaced token
-remains, via `grep -rniE '<[A-Z_]+_URL>|vafricaairlines\.com/<|>>|<<INSERT'`
-over `docs/` and `mkdocs.yml`. `--strict` can't see these; the guard is the
-safety net. If you add a new placeholder token, make sure it's replaced (or
-extend the guard) before merging to `main`.
+remains, via `grep -rnIiE '<[A-Z_]+_URL>|vafricaairlines\.com/<|>>|<<INSERT'`
+over `docs/` and `mkdocs.yml` (the `-I` flag skips binary assets so image bytes
+can't false-match). `--strict` can't see these; the guard is the safety net. If
+you add a new placeholder token, make sure it's replaced (or extend the guard)
+before merging to `main`.
 
 ## Design / copy
 

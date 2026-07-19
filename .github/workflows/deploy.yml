@@ -37,9 +37,10 @@ jobs:
       # Guard: fail the build if any unreplaced placeholder token slips in.
       # `mkdocs --strict` does NOT catch these, because `<token>` renders as a
       # valid relative autolink — which is exactly the dead-CTA bug this prevents.
+      # `-I` skips binary files (images/icons) so their bytes can't false-match.
       - name: Fail on unreplaced placeholders
         run: |
-          if grep -rniE '<[A-Z_]+_URL>|vafricaairlines\.com/<|>>|<<INSERT' docs/ mkdocs.yml; then
+          if grep -rnIiE '<[A-Z_]+_URL>|vafricaairlines\.com/<|>>|<<INSERT' docs/ mkdocs.yml; then
             echo "::error::Unreplaced placeholder token found — replace it before deploying."
             exit 1
           fi
