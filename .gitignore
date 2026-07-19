@@ -1,0 +1,21 @@
+# MkDocs build output — never commit; CI builds and deploys it.
+/site/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# MkDocs / plugin caches
+.cache/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

@@ -1,0 +1,32 @@
+/* vAfrica Airlines — brand overrides.
+ *
+ * TODO: Miguel — replace these placeholder brand colors with the real palette.
+ * These custom properties tint Material's primary/accent across the site.
+ * Reference: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
+ */
+
+:root {
+  /* Placeholder brand colors — swap for the real ones. */
+  --vafrica-primary: #00695c;   /* deep teal (placeholder) */
+  --vafrica-accent:  #ffb300;   /* amber (placeholder) */
+}
+
+/* Light + dark: map Material's theme variables to the brand colors above. */
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        var(--vafrica-primary);
+  --md-primary-fg-color--light: var(--vafrica-primary);
+  --md-primary-fg-color--dark:  var(--vafrica-primary);
+  --md-accent-fg-color:         var(--vafrica-accent);
+}
+
+/* Give the home hero heading a little more presence.
+ * TODO: Miguel — tune once real branding is in. */
+.md-typeset h1 {
+  font-weight: 700;
+}
+
+/* Space out stacked CTA buttons a touch. */
+.md-typeset .md-button + .md-button {
+  margin-left: 0.4rem;
+}
