@@ -6,8 +6,7 @@
 # Site metadata (SEO)
 # ---------------------------------------------------------------------------
 site_name: vAfrica Airlines
-# TODO: Miguel — replace <CUSTOM_DOMAIN> (e.g. www.example.com) everywhere it appears.
-site_url: https://<CUSTOM_DOMAIN>/
+site_url: https://vafricaairlines.com/
 site_description: >-
   vAfrica Airlines — a vAMSYS-based virtual airline. Join our community of
   flight-sim pilots and fly Africa's skies.

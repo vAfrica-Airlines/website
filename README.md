@@ -46,7 +46,7 @@ website/
 │   ├── join.md                    # Recruitment funnel (key conversion page)
 │   ├── faq.md                     # FAQ (collapsible admonitions)
 │   ├── contact.md                 # Contact / Discord
-│   ├── CNAME                      # custom domain (<CUSTOM_DOMAIN>)
+│   ├── CNAME                      # custom domain (vafricaairlines.com)
 │   └── assets/
 │       ├── images/                # logo.svg, favicon.svg (placeholders)
 │       └── stylesheets/extra.css  # brand color overrides
@@ -78,10 +78,14 @@ You can also trigger it manually from the **Actions** tab (`workflow_dispatch`).
 
 ### Custom domain DNS (Miguel)
 
+**Configured:** the site's custom domain is **`vafricaairlines.com`** (apex),
+set in Pages settings with apex `A` records pointed at GitHub. Reference kept
+below.
+
 GitHub Pages custom-domain docs:
 <https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site>
 
-- **Apex domain** (`example.com`): add `A` records to GitHub Pages' IPs
+- **Apex domain** (`vafricaairlines.com`): add `A` records to GitHub Pages' IPs
   (and `AAAA` for IPv6), or an `ALIAS`/`ANAME` if your DNS host supports it:
 
   ```
@@ -91,10 +95,9 @@ GitHub Pages custom-domain docs:
   A     185.199.111.153
   ```
 
-- **`www` subdomain** (`www.example.com`): add a `CNAME` record pointing to
-  `<your-org>.github.io` (e.g. `vafrica-airlines.github.io`).
-
-Use whichever (apex or `www`) matches the domain you set as `<CUSTOM_DOMAIN>`.
+- **`www` subdomain** (optional, `www.vafricaairlines.com`): add a `CNAME`
+  record pointing to `vafrica-airlines.github.io`. GitHub will then redirect
+  `www` → apex automatically. Not required since the apex is already set.
 
 ---
 
@@ -105,7 +108,7 @@ occurrences with real values. Also replace the placeholder assets.
 
 | Token / item          | Where it appears                                   | Replace with                          |
 | --------------------- | -------------------------------------------------- | ------------------------------------- |
-| `<CUSTOM_DOMAIN>`     | `mkdocs.yml` (`site_url`), `docs/CNAME`, this file, `deploy.yml` | Your real domain (e.g. `www.vafrica.example`) |
+| ~~`<CUSTOM_DOMAIN>`~~ | done — set to `vafricaairlines.com`                | ✅ replaced                            |
 | `<VAMSYS_JOIN_URL>`   | `docs/index.md`, `about.md`, `join.md`, `faq.md`, `contact.md` | The vAMSYS join/apply URL             |
 | `<DISCORD_INVITE_URL>`| `docs/index.md`, `join.md`, `contact.md`, `mkdocs.yml` (`extra.social`) | Your Discord invite link              |
 | `<AIRLINE_TAGLINE>`   | `docs/index.md`                                    | Your one-line tagline / value prop    |
@@ -117,8 +120,8 @@ occurrences with real values. Also replace the placeholder assets.
 Find every token at once:
 
 ```bash
-grep -rn -e '<CUSTOM_DOMAIN>' -e '<VAMSYS_JOIN_URL>' \
-        -e '<DISCORD_INVITE_URL>' -e '<AIRLINE_TAGLINE>' -e 'TODO: Miguel' .
+grep -rn -e '<VAMSYS_JOIN_URL>' -e '<DISCORD_INVITE_URL>' \
+        -e '<AIRLINE_TAGLINE>' -e 'TODO: Miguel' .
 ```
 
 ## Optional: social cards (Open Graph images)

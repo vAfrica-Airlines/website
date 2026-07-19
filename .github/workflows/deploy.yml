@@ -4,8 +4,8 @@ name: Deploy site
 #
 # One-time setup (Miguel):
 #   1. Repo Settings → Pages → Build and deployment → Source: "GitHub Actions".
-#   2. Repo Settings → Pages → Custom domain: enter <CUSTOM_DOMAIN> (this also
-#      keeps docs/CNAME in sync). Then configure DNS — see README.md:
+#   2. Repo Settings → Pages → Custom domain: enter vafricaairlines.com (this
+#      also keeps docs/CNAME in sync). Then configure DNS — see README.md:
 #        - apex (example.com):      A / ALIAS records to GitHub Pages IPs
 #        - www  (www.example.com):  CNAME to <your-org>.github.io
 #   3. Enable "Enforce HTTPS" once the certificate is issued.
