@@ -1,6 +1,8 @@
 ---
 title: FAQ
 description: Frequently asked questions about joining and flying with vAfrica Airlines — requirements, cost, supported sims, networks, and activity.
+hide:
+  - toc
 ---
 
 # Frequently asked questions

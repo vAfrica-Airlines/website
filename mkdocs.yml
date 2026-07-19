@@ -11,6 +11,7 @@ site_description: >-
   vAfrica Airlines — a vAMSYS-based virtual airline. Join our community of
   flight-sim pilots and fly Africa's skies.
 site_author: vAfrica Airlines
+copyright: Copyright &copy; 2026 vAfrica Airlines
 
 # Repo links (Material shows an edit/repo button). Adjust org/repo if it changes.
 repo_url: https://github.com/vAfrica-Airlines/website

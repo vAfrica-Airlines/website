@@ -1,6 +1,8 @@
 ---
 title: About
 description: Who vAfrica Airlines is — a vAMSYS-based virtual airline flying Africa's network. Learn what makes joining worthwhile.
+hide:
+  - toc
 ---
 
 # About vAfrica Airlines
