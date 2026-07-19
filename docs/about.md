@@ -1,6 +1,8 @@
 ---
 title: About
 description: Who vAfrica Airlines is — a vAMSYS-based virtual airline flying Africa's network. Learn what makes joining worthwhile.
+hide:
+  - toc
 ---
 
 # About vAfrica Airlines
@@ -13,12 +15,13 @@ want to fly Africa's skies together.
 
 ## Our concept
 
-<!-- TODO: Miguel — describe the network / theme / concept:
-     Which region and route network? What's the flying like?
-     Which era or fleet, if any? What's the "hook"? -->
+vAfrica Airlines flies across the African continent — linking major hubs,
+regional airports, and international gateways. From short regional hops to
+long-haul departures, there's always a new route to explore and a corner of the
+map to discover.
 
-Placeholder: a short paragraph on the network, theme, and what flying with
-vAfrica feels like.
+<!-- TODO: Miguel — enrich with vAfrica's specific network / theme / fleet
+     (hubs, regions, era, the "hook") once finalised. -->
 
 ## Why fly with us
 

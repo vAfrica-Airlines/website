@@ -34,3 +34,32 @@
   <meta name="twitter:description" content="{{ page_desc }}">
   <meta name="twitter:image" content="{{ og_image }}">
 {% endblock %}
+
+{#-
+  Expanded footer band: a lean brand + quick-links + community row above
+  Material's default footer. URLs reuse the centralized CTA values in
+  mkdocs.yml (config.extra) so there's still one source of truth.
+-#}
+{% block footer %}
+  <div class="vafrica-footer">
+    <div class="vafrica-footer__inner md-grid">
+      <div class="vafrica-footer__brand">
+        <strong>vAfrica Airlines</strong>
+        <p>Fly Africa's skies with a community of flight-sim pilots — all on vAMSYS.</p>
+        <a class="vafrica-footer__cta" href="{{ config.extra.vamsys_join_url }}">Join on vAMSYS</a>
+      </div>
+      <nav class="vafrica-footer__col" aria-label="Footer navigation">
+        <h4>Explore</h4>
+        {% for nav_item in nav %}
+        <a href="{{ nav_item.url | url }}">{{ nav_item.title }}</a>
+        {% endfor %}
+      </nav>
+      <div class="vafrica-footer__col">
+        <h4>Community</h4>
+        <a href="{{ config.extra.discord_url }}">Discord</a>
+        <a href="{{ config.repo_url }}">GitHub</a>
+      </div>
+    </div>
+  </div>
+  {% include "partials/footer.html" %}
+{% endblock %}

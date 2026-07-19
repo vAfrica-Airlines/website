@@ -1,6 +1,8 @@
 ---
 title: How to Join
 description: Join vAfrica Airlines in four steps — create a vAMSYS account, join vAfrica on vAMSYS, hop into Discord, and fly your first flight.
+hide:
+  - toc
 ---
 
 # How to join vAfrica Airlines

@@ -1,6 +1,8 @@
 ---
 title: Contact
 description: Get in touch with vAfrica Airlines. Our Discord community is the fastest way to reach us.
+hide:
+  - toc
 ---
 
 # Contact us
