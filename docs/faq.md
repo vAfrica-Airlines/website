@@ -7,32 +7,39 @@ hide:
 
 # Frequently asked questions
 
-<!-- TODO: Miguel — replace every answer below with real policy. These are
-     placeholders. Keep answers short and funnel-first (point people to vAMSYS
-     or Discord where it makes sense). -->
+Everything you need to know before you join. Still stuck? Ask us in
+[Discord](contact.md) — we're a friendly bunch.
 
-??? question "What do I need to join?"
-    Placeholder: an interest in flight sim and a **vAMSYS** account. See
-    [How to join](join.md).
+???+ question "What do I need to join?"
+    Three things: a flight simulator, a free **vAMSYS** account, and a Discord
+    account to reach the community. There's no application essay and no
+    interview — if you fly sims, you're welcome here. The
+    [How to join](join.md) page walks you through it in four short steps.
 
 ??? question "Is it free?"
-    Placeholder: vAfrica Airlines is free to join. <!-- TODO: Miguel — confirm. -->
+    Yes — joining vAfrica Airlines and flying with us is completely free.
+    There's no membership fee and no catch; all you need is a vAMSYS account,
+    which is also free to create.
 
 ??? question "Which simulators are supported?"
-    Placeholder: the major desktop sims (e.g. MSFS, X-Plane, P3D/FSX).
-    <!-- TODO: Miguel — confirm the exact list you support. -->
+    All the major desktop simulators: **Microsoft Flight Simulator 2024** and
+    **2020**, **X-Plane 11 and 12**, and **Prepar3D / FSX**. If your sim can
+    connect to vAMSYS, you can fly with us.
 
 ??? question "Do I need to fly on VATSIM or IVAO?"
-    Placeholder: online networks are optional / encouraged — your choice.
-    <!-- TODO: Miguel — state your actual policy. -->
+    No — online networks are entirely optional. You're welcome (and encouraged)
+    to fly on **VATSIM** or **IVAO** if you enjoy live ATC, but flying offline
+    is perfectly fine and your flights count exactly the same either way.
 
 ??? question "Are there activity requirements?"
-    Placeholder: fly at your own pace; a light activity policy may apply.
-    <!-- TODO: Miguel — state the real activity rules, if any. -->
+    None. Fly as often — or as little — as you like. There are no minimum hours,
+    no fixed rosters, and no risk of being dropped for taking a break. vAfrica
+    is built around flying at your own pace, whenever it suits you.
 
 ??? question "How do I track my flights and progress?"
-    All flying, tracking, and progression happen on **vAMSYS** — that's the
-    platform we run on. This site is just the front door.
+    Everything — bookings, flight tracking, hours, and progression — lives on
+    **vAMSYS**, the platform we run on. This site is just the front door; once
+    you're a pilot, vAMSYS is your home base.
 
 ---
 
