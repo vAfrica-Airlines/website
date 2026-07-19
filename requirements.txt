@@ -1,0 +1,17 @@
+# vAfrica Airlines — public website build dependencies
+# Pinned for reproducible builds in CI and locally.
+# After changing these, re-run `mkdocs build --strict` before committing.
+
+mkdocs-material==9.5.49
+mkdocs-minify-plugin==0.8.0
+
+# Optional — social cards / Open Graph images.
+# Material's `social` plugin needs the Cairo/Pango system libraries
+# (see .github/workflows/deploy.yml and README.md). Uncomment to enable,
+# then enable the `social` plugin in mkdocs.yml.
+# pillow==11.0.0
+# cairosvg==2.7.1
+
+# Optional — page redirects, if/when URLs move.
+# Enable the `redirects` plugin in mkdocs.yml after adding this.
+# mkdocs-redirects==1.2.2

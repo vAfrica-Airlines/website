@@ -1,0 +1,8 @@
+<!-- PLACEHOLDER logo — TODO: Miguel, replace with the real vAfrica Airlines logo. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="vAfrica Airlines (placeholder logo)">
+  <rect width="240" height="48" fill="none"/>
+  <g fill="#ffffff">
+    <path d="M8 34 L28 14 L30 16 L18 30 L34 28 L38 24 L40 26 L34 34 Z"/>
+  </g>
+  <text x="48" y="31" font-family="Roboto, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">vAfrica</text>
+</svg>

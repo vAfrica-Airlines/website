@@ -1,0 +1,127 @@
+# vAfrica Airlines — public website (Material for MkDocs)
+# Scaffolding config. Placeholder tokens marked <LIKE_THIS> are Miguel's to fill in.
+# See README.md for the full list of placeholders and DNS steps.
+
+# ---------------------------------------------------------------------------
+# Site metadata (SEO)
+# ---------------------------------------------------------------------------
+site_name: vAfrica Airlines
+site_url: https://vafricaairlines.com/
+site_description: >-
+  vAfrica Airlines — a vAMSYS-based virtual airline. Join our community of
+  flight-sim pilots and fly Africa's skies.
+site_author: vAfrica Airlines
+
+# Repo links (Material shows an edit/repo button). Adjust org/repo if it changes.
+repo_url: https://github.com/vAfrica-Airlines/website
+repo_name: vAfrica-Airlines/website
+edit_uri: edit/main/docs/
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/images/logo.svg
+  favicon: assets/images/favicon.svg
+  # TODO: Miguel — swap `primary`/`accent` for real brand colors.
+  # Full list: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+# ---------------------------------------------------------------------------
+# Navigation — the five funnel pages. `--strict` fails if any file is missing.
+# ---------------------------------------------------------------------------
+nav:
+  - Home: index.md
+  - About: about.md
+  - Join: join.md
+  - FAQ: faq.md
+  - Contact: contact.md
+
+# ---------------------------------------------------------------------------
+# Plugins — keep minimal.
+# ---------------------------------------------------------------------------
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  # Social cards / Open Graph images. Needs Cairo/Pango system libs in CI
+  # and the pillow/cairosvg Python deps (see requirements.txt). Uncomment
+  # both here and there to enable.
+  # - social
+
+# ---------------------------------------------------------------------------
+# Markdown extensions
+# ---------------------------------------------------------------------------
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# ---------------------------------------------------------------------------
+# Extra: brand CSS + social links
+# ---------------------------------------------------------------------------
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    # TODO: Miguel — replace <DISCORD_INVITE_URL> with the real invite link.
+    - icon: fontawesome/brands/discord
+      link: <DISCORD_INVITE_URL>
+      name: vAfrica Airlines on Discord
+  # Uncomment to disable Material's "Made with Material" footer note if desired.
+  generator: true
+
+# ---------------------------------------------------------------------------
+# Strict build: broken internal links / nav errors fail the build.
+# ---------------------------------------------------------------------------
+strict: true
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
