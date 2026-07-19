@@ -1,8 +1,10 @@
-<!-- PLACEHOLDER logo — TODO: Miguel, replace with the real vAfrica Airlines logo. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="vAfrica Airlines (placeholder logo)">
-  <rect width="240" height="48" fill="none"/>
-  <g fill="#ffffff">
-    <path d="M8 34 L28 14 L30 16 L18 30 L34 28 L38 24 L40 26 L34 34 Z"/>
-  </g>
-  <text x="48" y="31" font-family="Roboto, Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">vAfrica</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="vAfrica Airlines">
+  <defs><clipPath id="cd"><circle cx="256" cy="256" r="228"/></clipPath></defs>
+  <circle cx="256" cy="256" r="250" fill="#EFEDEC"/>
+  <circle cx="256" cy="256" r="238" fill="#0B2628"/>
+  <circle cx="256" cy="256" r="228" fill="#009B8D"/>
+  <g clip-path="url(#cd)"><rect x="0" y="300" width="512" height="60" fill="#02B4DC" clip-path="url(#cd)"/>
+    <rect x="0" y="360" width="512" height="92" fill="#BA4D00" clip-path="url(#cd)"/>
+    <rect x="0" y="452" width="512" height="60" fill="#7D3814" clip-path="url(#cd)"/></g>
+  <path d="M158.9,101.4 L112.2,160.0 L113.3,207.8 L143.7,237.1 L192.7,229.2 L202.8,239.3 L223.1,243.8 L221.9,267.5 L243.9,304.6 L237.1,337.3 L273.2,411.0 L302.4,405.9 L335.1,364.8 L334.0,345.1 L357.6,326.6 L353.1,279.3 L389.1,241.0 L399.8,210.1 L367.7,212.3 L326.6,146.5 L323.8,125.6 L270.9,117.8 L258.0,128.5 L222.5,111.0 L224.2,93.0 Z" fill="#0B2628" stroke="#fff" stroke-width="11" stroke-linejoin="round" paint-order="stroke"/>
 </svg>

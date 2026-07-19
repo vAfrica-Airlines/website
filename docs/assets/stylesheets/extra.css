@@ -1,29 +1,76 @@
 /* vAfrica Airlines — brand overrides.
  *
- * TODO: Miguel — replace these placeholder brand colors with the real palette.
- * These custom properties tint Material's primary/accent across the site.
+ * Palette and type come from the brand system (see Github/brand/).
+ * Canonical display face is Archivo; body is Hanken Grotesk (set in
+ * mkdocs.yml theme.font.text); mono is IBM Plex Mono (theme.font.code).
  * Reference: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
  */
 
+/* Display face for headings (Hanken Grotesk is loaded by Material via font.text). */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&display=swap');
+
 :root {
-  /* Placeholder brand colors — swap for the real ones. */
-  --vafrica-primary: #00695c;   /* deep teal (placeholder) */
-  --vafrica-accent:  #ffb300;   /* amber (placeholder) */
+  /* --- Brand palette (single source of truth) --- */
+  --vafrica-teal:        #009B8D;  /* primary surface/fill        */
+  --vafrica-teal-ink:    #00726A;  /* links/text on light         */
+  --vafrica-cyan:        #02B4DC;  /* secondary / stripe / dark links */
+  --vafrica-cyan-light:  #8DDFF1;  /* tint / top stripe           */
+  --vafrica-orange:      #BA4D00;  /* accent / CTA                */
+  --vafrica-rust:        #7D3814;  /* deep accent / hover         */
+  --vafrica-navy:        #0B2628;  /* ink / dark surface          */
+  --vafrica-cream:       #EFEDEC;  /* surface / keyline           */
+  --vafrica-flightpath:  #D93A2B;  /* motif line only             */
 }
 
-/* Light + dark: map Material's theme variables to the brand colors above. */
-[data-md-color-scheme="default"],
+/* Light scheme: teal primary, orange accent, teal-ink links. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        var(--vafrica-teal);
+  --md-primary-fg-color--light: var(--vafrica-cyan);
+  --md-primary-fg-color--dark:  var(--vafrica-navy);
+  --md-accent-fg-color:         var(--vafrica-orange);
+  --md-typeset-a-color:         var(--vafrica-teal-ink);
+}
+
+/* Dark scheme: keep the navy chrome, brighten links/accents for contrast. */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        var(--vafrica-primary);
-  --md-primary-fg-color--light: var(--vafrica-primary);
-  --md-primary-fg-color--dark:  var(--vafrica-primary);
-  --md-accent-fg-color:         var(--vafrica-accent);
+  --md-primary-fg-color:        var(--vafrica-teal);
+  --md-primary-fg-color--light: var(--vafrica-cyan);
+  --md-primary-fg-color--dark:  var(--vafrica-navy);
+  --md-accent-fg-color:         var(--vafrica-cyan);
+  --md-typeset-a-color:         var(--vafrica-cyan);
+  --md-default-bg-color:        var(--vafrica-navy);
 }
 
-/* Give the home hero heading a little more presence.
- * TODO: Miguel — tune once real branding is in. */
-.md-typeset h1 {
-  font-weight: 700;
+/* Headings in the display face. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Archivo", var(--md-text-font-family, system-ui), sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Full-width home hero banner (used at the top of docs/index.md). */
+.vafrica-hero img,
+img.vafrica-hero {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  margin: 0.4rem 0 1.4rem;
+  display: block;
+}
+
+/* Primary CTA in burnt orange for maximum "join" pull. */
+.md-typeset .md-button--primary {
+  background-color: var(--vafrica-orange);
+  border-color: var(--vafrica-orange);
+  color: #fff;
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background-color: var(--vafrica-rust);
+  border-color: var(--vafrica-rust);
+  color: #fff;
 }
 
 /* Space out stacked CTA buttons a touch. */

@@ -26,26 +26,27 @@ theme:
   language: en
   logo: assets/images/logo.svg
   favicon: assets/images/favicon.svg
-  # TODO: Miguel — swap `primary`/`accent` for real brand colors.
-  # Full list: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+  # Brand palette. Named swatches are the closest fallback; exact brand hex
+  # values are applied via docs/assets/stylesheets/extra.css (:root tokens +
+  # [data-md-color-scheme] overrides). See Github/brand/ for the system.
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: teal
-      accent: amber
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
-      accent: amber
+      accent: deep orange
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Hanken Grotesk   # body / UI
+    code: IBM Plex Mono    # code / callsigns / labels
   icon:
     repo: fontawesome/brands/github
   features:

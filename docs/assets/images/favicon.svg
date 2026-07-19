@@ -1,5 +1,9 @@
-<!-- PLACEHOLDER favicon — TODO: Miguel, replace with the real vAfrica favicon. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="vAfrica Airlines (placeholder favicon)">
-  <rect width="32" height="32" rx="6" fill="#00695c"/>
-  <path d="M6 22 L18 10 L19 11 L12 19 L22 18 L25 15 L26 16 L22 22 Z" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="vAfrica Airlines">
+  <defs><clipPath id="fd"><circle cx="256" cy="256" r="248"/></clipPath></defs>
+  <circle cx="256" cy="256" r="248" fill="#0B2628"/>
+  <circle cx="256" cy="256" r="228" fill="#009B8D"/>
+  <g clip-path="url(#fd)"><rect x="0" y="300" width="512" height="60" fill="#02B4DC" clip-path="url(#fd)"/>
+    <rect x="0" y="360" width="512" height="92" fill="#BA4D00" clip-path="url(#fd)"/>
+    <rect x="0" y="452" width="512" height="60" fill="#7D3814" clip-path="url(#fd)"/></g>
+  <path d="M155.2,95.8 L106.8,156.5 L107.9,206.2 L139.5,236.5 L190.3,228.3 L200.8,238.9 L221.8,243.5 L220.7,268.1 L243.4,306.6 L236.4,340.5 L273.8,417.0 L304.2,411.7 L338.1,369.1 L336.9,348.7 L361.4,329.4 L356.8,280.3 L394.1,240.6 L405.2,208.5 L371.9,210.8 L329.3,142.5 L326.4,120.9 L271.5,112.7 L258.0,123.8 L221.2,105.7 L223.0,87.0 Z" fill="#0B2628" stroke="#fff" stroke-width="12" stroke-linejoin="round" paint-order="stroke"/>
 </svg>

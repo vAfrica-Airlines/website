@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="vAfrica Airlines emblem">
+  <defs><clipPath id="rd"><circle cx="256" cy="256" r="224"/></clipPath></defs>
+  <circle cx="256" cy="256" r="250" fill="#EFEDEC"/>
+  <circle cx="256" cy="256" r="238" fill="#0B2628"/>
+  <circle cx="256" cy="256" r="224" fill="#009B8D"/>
+    <rect x="0" y="243" width="512" height="7" fill="#8DDFF1" clip-path="url(#rd)"/>
+    <rect x="0" y="250" width="512" height="9" fill="#02B4DC" clip-path="url(#rd)"/>
+    <rect x="0" y="259" width="512" height="4" fill="#8DDFF1" clip-path="url(#rd)"/>
+    <rect x="0" y="366" width="512" height="5" fill="#EFEDEC" clip-path="url(#rd)"/>
+    <rect x="0" y="371" width="512" height="27" fill="#BA4D00" clip-path="url(#rd)"/>
+    <rect x="0" y="398" width="512" height="3" fill="#EFEDEC" clip-path="url(#rd)"/>
+    <rect x="0" y="401" width="512" height="29" fill="#7D3814" clip-path="url(#rd)"/>
+    <rect x="0" y="430" width="512" height="51" fill="#4d240f" clip-path="url(#rd)"/>
+  <path d="M158.4,106.0 L114.3,161.2 L115.4,206.3 L144.1,233.9 L190.3,226.5 L199.8,236.1 L218.9,240.3 L217.9,262.6 L238.6,297.6 L232.2,328.4 L266.2,398.0 L293.8,393.2 L324.6,354.5 L323.5,335.9 L345.8,318.4 L341.6,273.8 L375.6,237.6 L385.7,208.4 L355.4,210.6 L316.6,148.4 L314.0,128.8 L264.1,121.4 L251.9,131.5 L218.4,115.0 L220.0,98.0 Z" fill="#0B2628" stroke="#fff" stroke-width="7" stroke-linejoin="round" paint-order="stroke"/>
+  <g transform="translate(300,232) rotate(38) scale(9.6) translate(-11.5,-12)"><path d="M22,16V14L13,9V3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L1,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L22,16Z" fill="#fff" stroke="#0B2628" stroke-width="0.9" stroke-linejoin="round" paint-order="stroke"/></g>
+</svg>
